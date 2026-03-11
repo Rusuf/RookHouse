@@ -43,7 +43,8 @@ export default function Header() {
             </svg>
           </div>
           <div className={styles.logoText}>
-            <span className={styles.logoTextFull}>ROOKHOUSE</span>
+            <span className={styles.logoTextRook}>ROOK</span>
+            <span className={styles.logoTextHouse}>HOUSE</span>
           </div>
         </Link>
 

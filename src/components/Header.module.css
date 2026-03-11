@@ -53,19 +53,27 @@
   align-items: center;
 }
 
-.logoTextFull {
+.logoTextRook {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: #1a1c1b; /* near black */
+}
+
+.logoTextHouse {
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: 1.4rem;
   letter-spacing: 0.1em;
-  color: var(--color-text);
-  white-space: nowrap;
+  color: #C5A059; /* golden */
 }
 
 .logoIcon {
   width: 26px;
   height: 26px;
-  color: var(--color-text);
+  color: #616A46; /* olive */
+  margin-right: 2px;
 }
 
 .logoIcon svg {
