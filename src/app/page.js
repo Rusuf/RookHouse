@@ -17,15 +17,15 @@ export default function Home() {
 
   useGSAP(() => {
     // Hero Entrance Animations
-    gsap.from('.gs-reveal-up', { 
-      y: 40, 
-      opacity: 0, 
-      duration: 1.2, 
-      stagger: 0.15, 
-      ease: 'power3.out', 
-      delay: 0.1 
+    gsap.from('.gs-reveal-up', {
+      y: 40,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.15,
+      ease: 'power3.out',
+      delay: 0.1
     });
-    
+
     // Gallery Stagger Entrance
     gsap.from('.gs-gallery-item', {
       y: 80,
@@ -69,7 +69,8 @@ export default function Home() {
           <div className={styles.heroTop}>
             <p className={`${styles.heroLabel} gs-reveal-up`}>COMMUNITY CHESS CLUB</p>
             <h1 className={`${styles.heroTitle} gs-reveal-up`}>
-              Local, <em>not distant.</em><br />
+              A home for the game.<br />
+              Rooted here, <em>open to all.</em><br />
               Karibu to the calm side of chess.
             </h1>
             <div className={`${styles.heroAction} gs-reveal-up`}>
@@ -92,7 +93,7 @@ export default function Home() {
             </div>
             <div className={`${styles.galleryCol} ${styles.col3} gs-gallery-item`}>
               <div className={styles.imageWrapper}>
-                <Image src="https://images.unsplash.com/photo-1579208032734-7d2d0bbf127f?q=80&w=600&auto=format&fit=crop" alt="Chess club atmosphere" fill className={styles.img} priority />
+                <Image src="https://images.unsplash.com/photo-1528819622765-d6bcf132f793?q=80&w=600&auto=format&fit=crop" alt="Chess club atmosphere" fill className={styles.img} priority />
               </div>
             </div>
             <div className={`${styles.galleryCol} ${styles.col4} gs-gallery-item`}>
@@ -107,13 +108,13 @@ export default function Home() {
       <section className={styles.manifesto}>
         <div className="container">
           <h2 className={`${styles.manifestoText} gs-scroll-reveal`}>
-            We are a chess home in suburban Nairobi. Built for <span>campus students, kids, and majirani</span> (neighbours). Find your board.
+            We are a chess home in Upper Kabete, Nairobi. Built for Everyone ~<span>students, kids</span> . Bring your passion. Find your board.
           </h2>
-          
+
           <div className={styles.detailsGrid}>
             <div className={`${styles.detailCard} gs-scroll-card`}>
               <h3>KES 500 / Month</h3>
-              <p>Unlimited arcade access. That&apos;s less than a meal for an entire month of community chess. Fika tuache kelele tutawale board.</p>
+              <p>Unlimited arcade access. That&apos;s less than a meal for an entire month of community chess. Fika tutawale board.</p>
               <Link href="/membership" className={styles.link}>View Memberships &rarr;</Link>
             </div>
             <div className={`${styles.detailCard} gs-scroll-card`}>
