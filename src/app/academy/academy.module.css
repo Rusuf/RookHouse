@@ -1,0 +1,153 @@
+.page {
+  padding-bottom: 120px;
+}
+
+.hero {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.heroLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.heroTitle em {
+  font-weight: 400;
+  color: #4A4E4C;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.programsSection {
+  padding: 80px 0;
+}
+
+.programsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.programCard {
+  padding: 40px;
+  border-radius: 12px;
+  background: var(--color-surface);
+  transition: transform 0.3s ease;
+}
+
+.programCard:hover {
+  transform: translateY(-4px);
+}
+
+.programHeader {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 24px;
+}
+
+.programName {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.programMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.badge {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.programDuration {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.programFocus {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.programFocus li {
+  padding: 12px 0;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  position: relative;
+  padding-left: 20px;
+}
+
+.programFocus li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-text);
+}
+
+.ctaSection {
+  padding-top: 80px;
+}
+
+.ctaCard {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 40px;
+  background: var(--color-text);
+  color: var(--color-surface);
+  border-radius: 24px;
+}
+
+.ctaCard h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.ctaCard p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #E0DACB;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .programsGrid {
+    grid-template-columns: 1fr;
+  }
+}

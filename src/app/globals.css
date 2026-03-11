@@ -1,0 +1,101 @@
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg: #F4F2EB;
+  --color-text: #2A2E2C;
+  --color-text-muted: #6B726E;
+  --color-surface: #FFFFFF;
+  --color-border: #E0DACB;
+  
+  /* Vivid Pastels from 3D Inspiration */
+  --color-pastel-orange: #FF8D6D;
+  --color-pastel-purple: #C8A2FF;
+  --color-pastel-blue: #7CB5E6;
+  --color-pastel-yellow: #FFD55A;
+  --color-pastel-green: #9CE19F;
+  --color-pastel-mint: #86DEBF;
+  --color-pastel-slate: #7D7A9E;
+  --color-pastel-peach: #EDA669;
+
+  --color-accent-green: var(--color-pastel-mint);
+  --color-accent-peach: var(--color-pastel-peach);
+  --color-accent-blue: var(--color-pastel-blue);
+  --color-accent-yellow: var(--color-pastel-yellow);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--color-accent-peach);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-primary:hover::before {
+  transform: scaleY(1);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}

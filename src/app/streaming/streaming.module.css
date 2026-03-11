@@ -1,0 +1,154 @@
+.page {
+  padding-bottom: 120px;
+}
+
+.hero {
+  padding-top: 180px;
+  padding-bottom: 80px;
+}
+
+.heroLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.heroTitle em {
+  font-weight: 400;
+  color: #4A4E4C;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 40px;
+  transition: background 0.2s ease;
+}
+
+.socials a:hover {
+  background: var(--color-surface);
+}
+
+.contentSection {
+  padding: 80px 0;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contentCard {
+  padding: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.contentTitle {
+  font-size: 1.4rem;
+}
+
+.badge {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.contentDesc {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.featuredSection {
+  padding: 40px 0;
+}
+
+.videoPlaceholder {
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+  background: #E8E5DA;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+.cta {
+  padding: 100px 0 0;
+}
+
+.ctaText {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 16px;
+}
+
+.ctaSub {
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+.link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--color-text);
+  padding-bottom: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
