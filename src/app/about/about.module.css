@@ -4,78 +4,190 @@
 
 .hero {
   padding-top: 180px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
+  background-color: var(--color-bg);
+}
+
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .heroLabel {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-weight: 600;
-  color: var(--color-text-muted);
-  margin-bottom: 32px;
+  color: var(--color-pastel-orange);
+  margin-bottom: 24px;
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(3rem, 5vw, 4.5rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  color: #1a1c1b;
 }
 
 .heroTitle em {
   font-weight: 400;
-  color: #4A4E4C;
+  color: #C5A059;
 }
 
-.storySection {
-  padding: 80px 0;
-}
-
-.storyContent {
-  max-width: 760px;
+.heroSub {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 650px;
   margin: 0 auto;
 }
 
-.lead {
-  font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  line-height: 1.4;
-  margin-bottom: 40px;
-  color: var(--color-text);
+/* Story Section */
+.storySection {
+  padding: 80px 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
 }
 
-.text {
+.storyContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.storyHeading {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  color: #1a1c1b;
+}
+
+.storyContent .text {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-muted);
   margin-bottom: 24px;
 }
 
+.storyContent .text strong {
+  color: #1a1c1b;
+  font-weight: 600;
+}
+
+.storyImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.storyImage {
+  object-fit: cover;
+}
+
+/* Mission & Vision Section */
+.missionSection {
+  padding: 100px 0;
+}
+
+.missionContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.missionBlock {
+  padding: 60px 40px;
+  border-radius: 24px;
+  transition: transform 0.3s ease;
+}
+
+.missionBlock:hover {
+  transform: translateY(-5px);
+}
+
+.bgMint {
+  background: linear-gradient(135deg, rgba(134,222,191,0.15) 0%, rgba(134,222,191,0.05) 100%);
+  border: 1px solid rgba(134,222,191,0.3);
+}
+
+.bgOrange {
+  background: linear-gradient(135deg, rgba(255,141,109,0.15) 0%, rgba(255,141,109,0.05) 100%);
+  border: 1px solid rgba(255,141,109,0.3);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.iconWrapper svg {
+  width: 24px;
+  height: 24px;
+  color: #1a1c1b;
+}
+
+.missionTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1a1c1b;
+}
+
+.missionBlock p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* Philosophy */
 .philosophySection {
-  padding: 100px 0 0;
+  padding: 60px 0 0;
+}
+
+.philosophyHeader {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .sectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 60px;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: #1a1c1b;
+  margin-bottom: 16px;
+}
+
+.sectionSub {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .card {
   padding: 40px;
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: 16px;
   background: var(--color-surface);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -83,37 +195,51 @@
   box-shadow: 0 12px 24px rgba(0,0,0,0.06);
 }
 
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
 .cardOrange {
   border-top: 6px solid var(--color-pastel-orange);
-  background: linear-gradient(to bottom, rgba(255,141,109,0.05), var(--color-surface));
 }
 
 .cardPurple {
   border-top: 6px solid var(--color-pastel-purple);
-  background: linear-gradient(to bottom, rgba(200,162,255,0.05), var(--color-surface));
 }
 
 .cardMint {
   border-top: 6px solid var(--color-pastel-mint);
-  background: linear-gradient(to bottom, rgba(134,222,191,0.05), var(--color-surface));
 }
 
 .card h3 {
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
   color: var(--color-text);
+  font-weight: 600;
 }
 
 .card p {
   color: var(--color-text-muted);
   line-height: 1.6;
+  font-size: 1.05rem;
 }
 
 @media (max-width: 900px) {
+  .storyContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .missionContainer {
+    grid-template-columns: 1fr;
+  }
   .grid {
     grid-template-columns: 1fr;
+  }
+  .storyImageWrapper {
+    aspect-ratio: 16/9;
   }
 }
